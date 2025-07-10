@@ -1,0 +1,352 @@
+* {
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+    font-family: "Jost", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f8f9fa;
+    color: #333;
+    overflow-x: hidden;
+}
+
+header {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #e3f2fd 20%, #bbdefb 80%);
+    color: #2c3e50;
+}
+
+main, footer {
+    background-color: #ffffff;
+}
+
+hr {
+    border-color: #333;
+}
+
+i {
+    font-size: 2rem;
+}
+
+.seta-topo {
+    position: fixed;
+    right: 4rem;
+    bottom: 4rem;
+    border-radius: 50%;
+    background-color: #4a6fa5;
+    height: 4rem;
+    width: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    transition: scale 0.4s ease;
+    color: white;
+    text-decoration: none;
+}
+
+.link-navegacao {
+    font-size: x-large;
+    display: inline-block;
+    position: relative;
+    color: #2c3e50;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: all 0.3s ease;
+}
+
+.link-navegacao::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 100%;
+    background: #4a6fa5;
+    z-index: -1;
+    transition: width 0.4s ease;
+}
+
+.link-navegacao:hover {
+    color: white;
+}
+
+.link-navegacao:hover::after {
+    width: 100%;
+}
+
+.titulo-site {
+    font-size: 5rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #2c3e50;
+}
+
+@media (max-width: 768px) {
+    .titulo-site {
+        font-size: 3.5rem;
+    }
+}
+
+.subtitulo-site {
+    font-size: 1.3rem;
+    color: #4a6fa5;
+}
+
+.botao-cabecalho {
+    padding: 15px 40px;
+    background: transparent;
+    color: #2c3e50;
+    border: 2px solid #4a6fa5;
+    border-radius: 0 !important;
+    transition: all 0.4s ease;
+    font-size: 1.5rem;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.botao-cabecalho::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 0;
+    background: #4a6fa5;
+    z-index: -1;
+    transition: height 0.4s ease;
+}
+
+.botao-cabecalho:hover {
+    color: white;
+}
+
+.botao-cabecalho:hover::after {
+    height: 100%;
+}
+
+.botao-projetos {
+    position: relative;
+    display: inline-block;
+    padding: 10px 40px;
+    color: #2c3e50;
+    background: transparent;
+    border: 2px solid #4a6fa5;
+    text-decoration: none;
+    overflow: hidden;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+.botao-projetos::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 0;
+    background: #4a6fa5;
+    z-index: -1;
+    transition: height 0.4s ease;
+}
+
+.botao-projetos:hover {
+    color: white;
+}
+
+.botao-projetos:hover::after {
+    height: 100%;
+}
+
+.botao-email {
+    position: relative;
+    display: inline-block;
+    padding: 20px 40px;
+    color: #2c3e50;
+    font-size: 1.3rem;
+    background: transparent;
+    border: 2px solid #4a6fa5;
+    text-decoration: none;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.botao-email::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 0;
+    background: #4a6fa5;
+    z-index: -1;
+    transition: height 0.4s ease;
+}
+
+.botao-email:hover {
+    color: white;
+}
+
+.botao-email:hover::after {
+    height: 100%;
+}
+
+.titulo-secao {
+    font-size: 3rem;
+    display: inline-block;
+    position: relative;
+    color: #2c3e50;
+    padding-bottom: 10px;
+}
+
+.titulo-secao::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background: #4a6fa5;
+}
+
+.imagem-portfolio {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.4s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.imagem-portfolio:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.logo-perfil {
+    max-width: 300px;
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border: 4px solid #4a6fa5;
+}
+
+.card-tecnologia {
+    border-radius: 8px;
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.social-link {
+    color: #4a6fa5;
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    color: #2c3e50;
+    transform: translateY(-3px);
+}
+
+.experiencia-item {
+    border-left: 3px solid #4a6fa5;
+    padding-left: 20px;
+    margin-bottom: 30px;
+}
+
+.tecnologia-lista {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.tecnologia-item {
+    background: #e3f2fd;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+.formulario-contato {
+    background: #f1f8ff;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.formulario-contato .form-control {
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    padding: 10px 15px;
+    margin-bottom: 20px;
+}
+
+.formulario-contato .form-control:focus {
+    border-color: #4a6fa5;
+    box-shadow: 0 0 0 0.2rem rgba(74, 111, 165, 0.25);
+}
+
+.formulario-contato textarea.form-control {
+    min-height: 150px;
+}
+
+.enviar-mensagem {
+    background: #4a6fa5;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.enviar-mensagem:hover {
+    background: #3a5a8a;
+    transform: translateY(-2px);
+}
+
+.rodape {
+    background: #2c3e50;
+    color: #f8f9fa;
+}
+
+.rodape a {
+    color: #bbdefb;
+    transition: all 0.3s ease;
+}
+
+.rodape a:hover {
+    color: white;
+}
+
+.destaque {
+    color: #4a6fa5;
+    font-weight: 600;
+}
+
+.barra-navegacao {
+    background: transparent;
+    backdrop-filter: blur(5px);
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #4a6fa5;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #3a5a8a;
+}
