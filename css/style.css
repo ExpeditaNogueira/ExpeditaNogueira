@@ -133,6 +133,32 @@ i {
     height: 100%;
 }
 
+#cabecalho {
+    position: relative;
+    background-image: url('https://blog.b2bstack.com.br/wp-content/uploads/2022/05/b2b-stack-blog-conheca-as-5-linguagens-de-programacao-mais-usadas-nos-jogos-.jpg.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll; /* ou 'fixed' se quiser efeito parallax */
+}
+
+#cabecalho::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.75); /* ajusta a opacidade aqui */
+    z-index: 1;
+}
+ 
+#cabecalho > * {
+    position: relative;
+    z-index: 2;
+}
+
+
 .botao-projetos {
     position: relative;
     display: inline-block;
